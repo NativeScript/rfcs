@@ -34,7 +34,7 @@ changes to one of the projects listed below:
 - [Nativescript iOS V8 Runtime](https://github.com/NativeScript/ns-v8ios-runtime)
 - [NativeScript CLI](https://github.com/NativeScript/nativescript-cli)
 
-We are limiting the RFC process for these repos to test out the process in a more manageable fashion, and may expand it to cover more projects under the `vuejs` organization in the future. For now, if you wish to suggest changes to those other projects, please use their respective issue lists.
+We are limiting the RFC process for these repos to test out the process in a more manageable fashion, and may expand it to cover more projects under the `NativeScript` organization in the future. For now, if you wish to suggest changes to those other projects, please use their respective issue lists.
 
 What constitutes a "substantial" change is evolving based on community norms, but may include the following:
 
@@ -45,7 +45,7 @@ What constitutes a "substantial" change is evolving based on community norms, bu
 
 Some changes do not require an RFC:
 
-- Additions that strictly improve objective, numerical quality criteria (speedup, better browser support)
+- Additions that strictly improve objective, numerical quality criteria (speedup, better runtime support)
 - Fixing objectively incorrect behavior
 - Rephrasing, reorganizing or refactoring
 - Addition or removal of warnings
@@ -141,7 +141,7 @@ feel free to ask (e.g. by leaving a comment on the associated issue).
 Members of the [core team] will attempt to review some set of open RFC
 pull requests on a regular basis. If a core team member believes an RFC PR is ready to be accepted into active status, they can approve the PR using GitHub's review feature to signal their approval of the RFC.
 
-**Nativescript's RFC process owes its inspiration to the [React RFC process], [Rust RFC process] and [Ember RFC process]**
+**Nativescript's RFC process owes its inspiration to the [Vuejs RFC process], [React RFC process], [Rust RFC process] and [Ember RFC process]**
 
 [Vuejs RFC process]: https://github.com/vuejs/rfcs
 [React RFC process]: https://github.com/reactjs/rfcs
