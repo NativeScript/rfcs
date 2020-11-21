@@ -93,7 +93,7 @@ When resolving the config, `@nativescript/webpack` will scan all dependencies de
 
 It's only scanning packages that are defined in `package.json` since `node_modules` could potentially have thousands of dependencies that we would otherwise be scanning for each build.
 
-This has a drawback for packages that rely on transitive dependencies that provide a `nativescript.webpack.js` as those would not be discovered. The suggested workaround is for packages that rely on transitive packages, ti inclue a `nativescript.webpack.js` of their own, and explicitly `require` the transitive configs:
+This has a drawback for packages that rely on transitive dependencies that provide a `nativescript.webpack.js` as those would not be discovered. The suggested workaround is for packages that rely on transitive packages, to inclue a `nativescript.webpack.js` of their own, and explicitly `require` the transitive configs:
 ```js
 // package-a/nativescript.webpack.js
 const packageB = require('package-b/nativescript.webpack.js')
