@@ -37,9 +37,13 @@ module.exports = env => {
     webpack.useConfig('vue')
 
     // Optional: apply changes to the internal config using webpack-chain
+    // The options object is optional
+    const options = {
+        last: true // execute the changes after all other configuration is complete
+    }
     webpack.chainWebpack((config, env) => {
         config.mode('production') // for example: force production mode
-    })
+    }, options)
 
     // Optional: merge options into the internal config
     webpack.mergeWebpack({
@@ -64,6 +68,20 @@ module.exports = env => {
 }
 ```
 
+The `chainWebpack` function accepts an optional options object:
+
+```ts
+interface ChainOptions {
+    /**
+     * Apply config changes last - useful for plugins that have to apply 
+     * their changes after all other chain functions are ran.
+     */
+    last?: boolean
+}
+```
+
+Multiple plugins may set `last: true`, in that case the order is based on the order of the dependencies in `package.json`.
+
 **For 3rd party packages:**
 
 Packages can publish a `nativescript.webpack.js` file in the root directory of the package.
@@ -85,7 +103,7 @@ module.exports = (webpack) => {
             .test(/\.svg$/)
             .use('svg-loader')
             .loader('svg-loader')
-    })
+    }/*, options */)
 }
 ```
 
