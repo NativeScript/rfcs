@@ -39,7 +39,7 @@ module.exports = env => {
     // Optional: apply changes to the internal config using webpack-chain
     // The options object is optional
     const options = {
-        last: true // execute the changes after all other configuration is complete
+        order: 10 // execute "last"
     }
     webpack.chainWebpack((config, env) => {
         config.mode('production') // for example: force production mode
@@ -73,14 +73,21 @@ The `chainWebpack` function accepts an optional options object:
 ```ts
 interface ChainOptions {
     /**
-     * Apply config changes last - useful for plugins that have to apply 
-     * their changes after all other chain functions are ran.
+     * A number used to control the order in which chain functions are applied
+     * 
+     * Recommended values:
+     * -1   - for base configs (usually internal)
+     *  0   - (default)
+     *  1-9 - for related plugins to order their configs
+     *  10  - for plugins that should apply "last"
+     *
+     * It's possible to set values lower than -1, or higher than 10
+     * however it's not recommended, the default range should cover
+     * most use-cases.
      */
-    last?: boolean
+    order?: number
 }
 ```
-
-Multiple plugins may set `last: true`, in that case the order is based on the order of the dependencies in `package.json`.
 
 **For 3rd party packages:**
 
