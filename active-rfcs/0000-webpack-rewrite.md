@@ -144,6 +144,21 @@ All configuration to be managed with `webpack-chain` internally.
 
 The bulk of the configuration to be managed in a `base` configuration, and only configure flavor specific additions in the flavor specific configurations: `angular`, `react`, `vue`, `svelte`, `typescript` (as flavor), `javascript` (as flavor).
 
+How the final config is constructed:
+
+The flavor is detected based on dependencies (or by explictly calling `useConfig`) and the corresponding chain function is added to the internal chain array.
+
+Dependencies are scanned for the `nativescript.webpack.js` files and executed:
+* calls to `chainWebpack` are pushed to the internal chain array.
+* calls to `mergeWebpack` are pushed to the internal merge array.
+
+The internal chain array is sorted based on the `order` values for each entry (generally ranging from -1 to 10).
+
+Each chain function is called and the internal config (chain-webpack) instance is passed along with the `env`.
+
+A new config object is created after all chain functions have been applied, and each merge config from the internal merge array is merged into the resolved config.
+
+The final config is returned by `resolveConfig` - which kicks off the whole process.
 
 # Drawbacks
 
