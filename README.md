@@ -64,8 +64,7 @@ These constraints and tradeoffs may not be immediately obvious to users who are 
 ## Gathering feedback before submitting
 
 It's often helpful to get feedback on your concept before diving into the
-level of API design detail required for an RFC. **You may open an
-issue on this repo to start a high-level discussion**, with the goal of
+level of API design detail required for an RFC. **You may open a discussion on this repo to start a high-level discussion**, with the goal of
 eventually formulating an RFC pull request with the specific implementation
 design.
 
