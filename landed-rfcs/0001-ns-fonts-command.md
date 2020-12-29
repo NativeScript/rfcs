@@ -1,7 +1,7 @@
 - Start Date: 2020-12-21
 - Target Major Version: 8.x
-- Reference Issues: 
-- Implementation PR: 
+- Reference Issues: N/A
+- Implementation PR: https://github.com/NativeScript/nativescript-cli/pull/5452
 
 # Summary
 
