@@ -1,5 +1,5 @@
 - Start Date: 2020-11-13
-- Target Major Version: 7.x
+- Target Major Version: 8.x
 - Reference Issues: https://github.com/NativeScript/rfcs/issues/1
 - Implementation PR: https://github.com/NativeScript/NativeScript/pull/9038
 
