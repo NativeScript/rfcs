@@ -1,5 +1,5 @@
 - Start Date: 2022-12-26
-- Target Major Version: 9.x
+- Target Major Version: 9.0 or 10.0
 
 # Summary
 
@@ -82,7 +82,7 @@ What [was done in 8.2](https://blog.nativescript.org/where-did-my-types-go/). Pa
 
 This approach could be introduced with NativeScript 9.0 purely as an option. Could be a flag enabled in `nativescript.config` which would enable the bundler to be aware of one way or the other. It may not need a flag as it's possible you could use both approaches for awhile.
 
-This would be a slow migration between version 9 to 12 likely.
+This would be a slow migration between version 9/10 to 12 likely.
 
 TSC could introduce several migrations for plugin vendors and projects until eventually all that exists is the scoped types.
 
