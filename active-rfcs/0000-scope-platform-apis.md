@@ -11,7 +11,7 @@ NSString.
 java.
 ```
 
-On the surface it sounds adverse to common JavaScript standards. In practice it's actually not as bad as it sounds mainly because NativeScript is it's own JavaScript runtime so it's rules our customizable and controllable. The problem often comes down to TypeScript types and the fact that you really don't need all the platform API types available in the global scope. NativeScript 8.2 helped this be confining the types and clarifying how you can include more if you want, see [this post](https://blog.nativescript.org/where-did-my-types-go/).
+On the surface it sounds adverse to common JavaScript standards. In practice it's actually not as bad as it sounds mainly because NativeScript is it's own JavaScript runtime so it's rules are customizable and controllable. The problem often comes down to TypeScript types and the fact that you really don't need all the platform API types available in the global scope. NativeScript 8.2 helped this be confining the types and clarifying how you can include more if you want, see [this post](https://blog.nativescript.org/where-did-my-types-go/).
 
 It's long been debated and even attacked as to whether platform API types should be on the global scope.
 
