@@ -5,7 +5,7 @@
 
 Right now, there are no built-in generators for building apps. Everything from component creation, to generating types and **auto configuring the project for their usage**, to creating widgets (iOS and Android boilerplate setup like the folder where it goes and supporting files like extension.json).
 
-Generators help speed help development but can also help encourage best practices from naming things to even initial file setup.
+Generators help speed up development but can also help encourage best practices from naming things to even initial file setup.
 
 @nativescript/nx and xplat come with generators to help project setup/creation/development however they come with other aspects that make them not as easy to pick up and just use right after setting up a NativeScript development machine.
 
